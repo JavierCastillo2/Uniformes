@@ -1,0 +1,197 @@
+$(document).ready(function() {
+  // Menu Add Class Left
+  $('#hamburger-icon').click(function() {
+    $('.slide-menu').toggleClass('slide-left');
+  });
+  //  Menu Add Class Close
+  $('.slide-close-button button, .mdl-layout__obfuscator').click(function() {
+    $('.slide-menu').removeClass('slide-left');
+  });
+  // Menu Dropdown menu active
+  $('.dropdownmenu').click(function() {
+    $('.sub-menu').toggleClass('active'), fadeIn(46000);
+  });
+  // Menu Add Class Right
+  $('#cart-icon').click(function() {
+    $('.slide-cart').toggleClass('slide-right');
+  });
+  //  Menu Add Class Close
+  $('.cart-close-button button').click(function() {
+    $('.slide-cart').removeClass('slide-right');
+  });
+  //  Menu Add Class Close
+  $('.slide-cart-close-button button').click(function() {
+    $('.slide-cart').removeClass('slide-right');
+  });
+  //  Brands Carousel
+  $('.owl-carousel.brands').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 2,
+        nav: true,
+      },
+      600: {
+        items: 3,
+        nav: false,
+      },
+      1000: {
+        items: 6,
+        loop: false,
+      },
+    },
+  });
+  //  Home Principal Slide Carousel
+  /*  $('.owl-carousel.owl-home').owlCarousel({
+    loop:true,
+    margin:10,
+    autoplay: true,
+    items:1,
+    nav:false
+	});  */
+  // Last Products Carousel
+  $('.owl-carousel.latest-products').owlCarousel({
+    margin: 10,
+    responsiveClass: true,
+    nav: true,
+    responsive: {
+      0: {
+        items: 2,
+        nav: true,
+      },
+      600: {
+        items: 3,
+        nav: false,
+      },
+      1000: {
+        items: 4,
+        loop: false,
+      },
+    },
+  });
+
+  /* ------------------------------------ */
+  /*  Menu Mobile Dropdown
+/* ------------------------------------ */
+
+  $('.dropdown-item').on('click', function() {
+    $(this)
+      .next('.dropdown-item-menu')
+      .toggle();
+    $(this).toggleClass('border-show');
+    $(this).attr('aria-expanded', 'true');
+  });
+
+  $(document).on('click', function(e) {
+    var target = e.target;
+    if (
+      !$(target).is('.dropdown-toggle') &&
+      !$(target)
+        .parents()
+        .is('.dropdown-toggle')
+    ) {
+      $('.dropdown-item-menu').hide();
+    }
+  });
+});
+/* ------------------------------------ */
+/*  Plus and Minus Products
+/* ------------------------------------ */
+$(document).ready(function() {
+  // Input with Plus & Minus buttons
+  var j = jQuery; //Just a variable for using jQuery without conflicts
+  var addInput = '#input-qty'; //This is the id of the input you are changing
+  var n = 1; //n is equal to 1
+
+  //Set default value to n (n = 1)
+  j(addInput).val(n);
+
+  //On click add 1 to n
+  j('.plus').on('click', function() {
+    j(addInput).val(++n);
+  });
+
+  j('.min').on('click', function() {
+    //If n is bigger or equal to 1 subtract 1 from n
+    if (n >= 1) {
+      j(addInput).val(--n);
+    } else {
+      //Otherwise do nothing
+    }
+  });
+});
+
+/* ------------------------------------------ */
+/*   Slider product desktop
+/* ------------------------------------------- */
+$(document).ready(function() {
+  var owl_1 = $('#owl-1');
+  var owl_2 = $('#owl-2');
+
+  owl_1.owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    items: 1,
+    dots: false,
+  });
+
+  owl_2.owlCarousel({
+    margin: 10,
+    nav: false,
+    items: 5,
+    dots: false,
+  });
+
+  owl_2.find('.item').click(function() {
+    var slide_index = owl_2.find('.item').index(this);
+    owl_1.trigger('to.owl.carousel', [slide_index, 300]);
+  });
+
+  // Custom Button
+  $('.customNextBtn').click(function() {
+    owl_1.trigger('next.owl.carousel', 500);
+  });
+  $('.customPreviousBtn').click(function() {
+    owl_1.trigger('prev.owl.carousel', 500);
+  });
+});
+
+/* ------------------------------------------ */
+/*   Slider product mobile
+/* ------------------------------------------- */
+$(document).ready(function() {
+  var owl_1resp = $('#owl-a');
+  var owl_2resp = $('#owl-b');
+
+  owl_1resp.owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    items: 1,
+    dots: false,
+  });
+
+  owl_2resp.owlCarousel({
+    margin: 10,
+    nav: true,
+    items: 5,
+    dots: false,
+  });
+
+  owl_2resp.find('.item').click(function() {
+    var slide_index = owl_2resp.find('.item').index(this);
+    owl_1resp.trigger('to.owl.carousel', [slide_index, 300]);
+  });
+
+  // Custom Button
+  $('.customNextBtn').click(function() {
+    owl_1resp.trigger('next.owl.carousel', 500);
+  });
+  $('.customPreviousBtn').click(function() {
+    owl_1resp.trigger('prev.owl.carousel', 500);
+  });
+});

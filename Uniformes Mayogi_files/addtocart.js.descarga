@@ -1,0 +1,61 @@
+function addToCart2(id, productName, qty, options) {
+  Jumpseller.addProductToCart(id, qty, options, {
+    callback: function(data, status) {
+      toastr.options = {
+        closeButton: true,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: 'toast-top-right',
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: '500',
+        hideDuration: '1000',
+        timeOut: '5000',
+        extendedTimeOut: '1000',
+        showEasing: 'swing',
+        hideEasing: 'linear',
+        showMethod: 'fadeIn',
+        hideMethod: 'fadeOut',
+      };
+
+      if (data.status == 404) {
+        toastr.error(data.responseJSON.message);
+      } else {
+        if (parseInt(qty) == 1) {
+          toastr.success(
+            qty +
+              ' ' +
+              productName +
+              ' ' +
+              singleProductMessage +
+              ' <a href="' +
+              $('#cart-link').attr('href') +
+              '"> ' +
+              shoppingCartMessage +
+              '</a>'
+          );
+        } else {
+          toastr.success(
+            qty +
+              ' ' +
+              productName +
+              ' ' +
+              multiProductMessage +
+              ' <a href="' +
+              $('#cart-link').attr('href') +
+              '"> ' +
+              shoppingCartMessage +
+              '</a>'
+          );
+        }
+      }
+
+      // update cart in page
+      $('.cart-size').text(parseInt($('.cart-size').text()) + parseInt(qty));
+      $('.cart-size-2').text(
+        parseInt($('.cart-size-2').text()) + parseInt(qty)
+      );
+    },
+  });
+}

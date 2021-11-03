@@ -1,0 +1,198 @@
+/* =============================================================
+Here you will find the "Color Pickers" CSS attributes. You can change them by going to your Admin Panel at Themes > Options.
+If you want to add more pickers to your store's set, or wanna know more about what you can on the code visit the following link https://jumpseller.com/support/creating-a-custom-html-theme#special-variables
+
+© Copyright New Premium Theme. Powered by Jumpseller
+============================================================= */
+
+/* =============================================================
+  COLOR PICKERS
+============================================================= */
+
+/* Store Background | Default: #FFF */
+body {
+  background-color: #ffffff ;
+  color: #3d3d3d;
+}
+p, ul, li, ul li a, ul.footer-list li a, h1, h2, h3, h4, h5, h6, .contact-information ul li a, #product label {
+	color: #3d3d3d;
+}
+a, .text-logo, h1.title-slide-menu, .slide-close-button button, #mobile-sidebar-menu li.item.active a{
+	color: #013c6f;
+}
+
+.navbar-inverse {
+  background-color: #013c6f ;
+  border-color: #013c6f;
+}
+.nav-desktop.sub-menu li{
+ 	background-color: #013c6f ;
+}
+
+.toast, .toast-success {background-color: #80c95c;}
+
+.slide-menu-close::before, .slide-menu-close::after, .slide-cart-close::before, .slide-cart-close::after {
+	background: #013c6f;
+}
+.bg-color-2, ul.dropdown-menu.multi-level li a{
+	background: #013c6f;
+}
+
+.bg-color-3{
+	background: #37ab9f;
+}
+
+#show_filters {
+  border-color: #37ab9f;
+  color: #37ab9f;
+}
+
+#side-filters .badge {
+  background-color: #37ab9f;
+}
+
+#show_filters:hover {
+  background-color: #37ab9f;
+  color: #fff;
+}
+
+.bg-color-4{
+	background: #f3a115;
+}
+
+.color-2{
+	color: #013c6f;
+}
+
+nav#main-menu,
+.blog-sidebar, .border-dashed,
+.slide-menu > .slide-menu-here > .menu .item,
+.slide-menu > .slide-menu-here > .menu li > .dropdown-item-menu,
+li.dropdown.languages,
+.slide-menu a:hover,
+#mobile-sidebar-menu .languages .dropdown-menu {
+	border-color: #013c6f;
+}
+
+nav#main-menu  a,
+.all_categories .btn-categories,
+.cart-check-payment .table thead th,
+.cart-check-payment h2.card-title, .checkout-container h2.legend,
+.review .card-header h5,
+.sucess .order-sucess .card-body h5 strong,
+.sucess .order-sucess .card-body p strong,
+.sucess .create-account .card-header h4,
+.account .card-header .card-title,
+.account div#customer-summary h2,
+.customer-page #customer-new .card-header .card-title,
+.customer-page form h4.title,
+li.dropdown.languages.show span.icon-language .up-mob {
+  color: #013c6f;
+}
+#navbarNav li.item.active a,
+.contact-information .icon-contact,
+p.title-list-footer,
+#home-products .price-mob,
+#blog-home .post .title-blog-home,
+.title-post a,
+.title-post,
+.post h2.sidebar-title,
+.post .new-post h3 a,
+.categories .price-mob,
+#product .product-form-price,
+#product .main-category-image .caption .price-related,
+.cart-heading li.title-breadcrumb.active a,
+.cart-heading li.title-breadcrumb.active i,
+.container.cart-check.cart-check-payment.payment-and-review section a.btn.btn-link{
+	color: #37ab9f;
+}
+section.section-form,
+button#mc-embedded-subscribe, ul.nav-top .dropdown-menu.show,
+#navbarNav .link-menu.nivel1 .nav-desktop.nivel1 .item.link-menu.nivel2 a{
+  background-color: #013c6f;
+}
+button.owl-dot.active,
+#navbarNav .item.nivel1 .nav-desktop.nivel1 .item.nivel2 .nav-desktop.nivel2 .item a,
+#product label.btn.btn-default, .bg-info.text-white.alert, button.owl-prev, .owl-nav button.owl-next {
+ background-color: #37ab9f !important;
+}
+#contact input.button.btn.btn-primary.btn-block, .product-block-label .product-block-sale, .filter_wrapper .button {
+  background-color: #f3a115;
+}
+.container.body-top-footer, .container.body-bottom-footer,
+.blog-post, .check-cart .contain-bread, .check-cart .contain-bread{
+  border-color: #37ab9f;
+}
+.contact-information a:hover, a.level-1.trsn.nav-link:hover {
+  color: #37ab9f !important;
+}
+.blog a.btn.btn-primary, .cart-check-payment a.btn.btn-primary.btn-block{
+  background-color:#013c6f;
+  border: #013c6f;
+}
+.btn-details.btn-hover {
+  background-color: #f3a115;
+  border: #f3a115;
+}
+.btn-add.btn-hover {
+  background-color: #37ab9f;
+  border: #37ab9f;
+}
+
+.cart-check-payment .table thead th,
+.cart-check-payment .table, .sucess .order-sucess .card-header,
+.sucess .order-sucess .card,.account .card
+{
+	border-color: #013c6f;
+}
+
+.cart-check-payment .btn-outline-secondary, .review .card label, .account .table thead th,
+.customer-page .card-body .btn-secondary{
+  border-color: #013c6f;
+  color: #013c6f;
+}
+
+.cart-check-payment .btn-outline-secondary:hover,
+.checkout-container input#submit_review_order,
+.review input#place_order,
+.sucess .create-account input#submit_password,
+.customer-page .card-body .btn-secondary:hover,
+.customer-page input.btn-primary{
+    color: #fff !important;
+    background-color: #013c6f !important;
+    border-color: #013c6f !important;
+}
+
+.carousel-caption h1, .carousel-caption p{
+  color:#ffffff;
+}
+.banner-home a.banner-link p, .banner-home a.banner-link h3{
+	color:#000000;
+}
+li.breadcrumb-item a, .inside-header h1.page-header, li.breadcrumb-item span{
+	color:#ffffff;
+}
+.subscribe-block h3, .subscribe-block p{
+	color: #fff 
+}
+
+/*Lines*/
+nav#main-menu, #product div#product-sharing, .check-cart .contain-bread{
+	border-top-style:dashed;
+}
+.banner-intro-home .banner-container,
+.hover-border,
+.container-form,
+.border-dashed,
+.btn-hover span:first-child,
+.subtotal{
+  border-style:dashed;
+}
+.container.body-top-footer, .container.body-bottom-footer, .blog-post, .check-cart .contain-bread,
+.account .card{
+  border-bottom-style:dashed;
+}
+
+.blog-sidebar{
+  border-left-style:dashed;
+}
